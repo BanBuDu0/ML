@@ -21,4 +21,8 @@ classifier = classifier.fit(X_train, Y_train)
 Y_predict = classifier.predict(X_test)
 
 equal = 0
-z
+for i in xrange(len(Y_predict)):
+    if Y_predict[i] == Y_test[i]:
+        equal += 1
+
+print 'Accuracy = %s' % (float(equal)/len(Y_predict))
